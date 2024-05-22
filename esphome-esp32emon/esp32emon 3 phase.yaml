@@ -20,27 +20,17 @@ logger:
 # Enable Home Assistant API
 api:
   encryption:
-    key: "XyEeuRUQuwVw+5eycxjQQZ2iFL64uZupxy/6pFfXKrA="
+    key: ""
 
 ota:
-  password: "14b7a426c3bc4ec3be5ba6ece6900678"
+  password: ""
 
 wifi:
   networks:
-#  - ssid: JIMIT1
-#    password: "yog@13900"
-  - ssid: TWO #!secret wifi_ssid
-    password: "12341234" #!secret wifi_password
 
-#  use_address: 10.36.152.102
-# Optional manual IP
-  manual_ip:
-    static_ip: 10.36.152.42
-    gateway: 10.36.152.1
-    subnet: 255.255.255.0
-    dns1: 8.8.8.8
-    dns2: 8.8.4.4
-  reboot_timeout: 0s
+  - ssid: !secret wifi_ssid
+    password: !secret wifi_password
+
 
   # Enable fallback hotspot (captive portal) in case wifi connection fails
   ap:
